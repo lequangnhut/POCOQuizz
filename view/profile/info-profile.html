@@ -1,0 +1,99 @@
+<div class="layout">
+
+    <div class="container mt-5 pt-5 mb-5 pb-5 p-4" style="min-height: 60vh;">
+
+        <div class="row bg-white rounded-4 p-5" style="box-shadow: 4px 4px 4px rgba(190, 190, 190, 0.5);">
+
+            <div class="col-12 col-md-3 col-lg-3">
+
+                <div class="img-profile">
+
+                    <img src="./images/profile-logo.png" class="img-fluid rounded-top" width="60%">
+
+                </div>
+
+                <div class="link-profile">
+
+                    <h6 class="text-secondary">WORD LINK</h6>
+                    <h6 class="text-dark mt-4">Website Link</h6>
+                    <h6 class="text-dark ">Bootsnipp Profile</h6>
+                    <h6 class="text-dark ">Bootply Profile</h6>
+
+                    <h6 class="text-secondary mt-4">SKILLS</h6>
+                    <h6 class="text-dark mt-4">Web Designer</h6>
+                    <h6 class="text-dark ">Web Developer</h6>
+                    <h6 class="text-dark ">WordPress</h6>
+                    <h6 class="text-dark ">WooCommere</h6>
+                    <h6 class="text-dark ">PHP.Net</h6>
+                    <h6 class="text-dark ">XARM</h6>
+                    <h6 class="text-dark ">SQL Server</h6>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-9">
+
+                <div class="profile-name">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-12 col-lg-9">
+
+                            <h4 class="text-dark">{{quiz.fullname}}</h4>
+                            <span class="text-info">Web Developer and Designer</span>
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <h4>
+                                <a href="#!edit-profile/{{SesionUser.id}}" class="text-info fs-5 text-decoration-none">
+                                    Chỉnh sửa thông tin
+                                </a>
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="text-dark">
+
+                </div>
+
+                <div class="info mt-5">
+
+                    <div class="row g-0">
+
+                        <h4 class="text-dark">Thông tin</h4>
+
+                        <div class="col-5 col-md-6 col-lg-6">
+
+
+                            <h6 class="text-dark mt-4">Họ và tên: </h6>
+                            <h6 class="text-dark mt-4">Email: </h6>
+                            <h6 class="text-dark mt-4">Số điện thoại: </h6>
+                            <h6 class="text-dark mt-4">Ngày sinh: </h6>
+
+                        </div>
+
+                        <div class="col-7 col-md-6 col-lg-6">
+
+                            <h6 class="text-dark mt-4">{{quiz.fullname}}</h6>
+                            <h6 class="text-dark mt-4">{{quiz.email}}</h6>
+                            <h6 class="text-dark mt-4">{{quiz.phone}}</h6>
+                            <h6 class="text-dark mt-4">{{quiz.date | date: 'dd/MM/yyyy'}}</h6>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+<!-- tất cả khoá học -->
+<div class="container light-content pt-2 mt-5" id="course">
+
+    <div class="bigTitle">
+        <div class="title-khoahoc">Tất Cả Các Khoá Học</div>
+        <div class="des">Những khoá học có số lượng học viên theo học
+            nhiều nhất và có phản hồi tích cực nhất
+        </div>
+    </div>
+
+    <div class="khoahoc-fpt" ng-controller="authLogin">
+
+        <div class="row">
+
+            <div class="col-12 col-md-4 col-lg-4 pb-4" ng-repeat="sub in subjects| orderBy: prop | limitTo: 20:begin">
+
+                <div class="card card-logo">
+
+                    <img ng-src="images/logos/{{ sub.Logo }}" class="img-fluid">
+
+                    <div class="overlay">
+
+                        <p>
+                            - Khoá học Phát triển Android nâng cao do Nhóm đào tạo nhà
+                            phát triển của Google xây dựng.
+                            Tài liệu khoá học gồm có:
+                            <br>
+                            - Tài liệu tham khảo về khái niệm
+                            Bộ trang trình bày (không bắt buộc, dùng trong lớp học)
+                            <br>
+                            - Mã nguồn trong GitHub cho các ứng dụng bạn tạo ra trong lớp học lập trình
+                        </p>
+
+                        <a class="btn btn-outline-light fs-5" style="height: 45px;"
+                            href="#!quiz/{{sub.Id}}/{{sub.Name}}" ng-if="SesionUser">
+                            Tham gia khoá học
+                        </a>
+
+                        <a class="btn btn-outline-light fs-5" style="height: 45px;" href="#!login" ng-if="!SesionUser">
+                            Vui lòng đăng nhập
+                        </a>
+
+                    </div>
+
+                    <div class="card-body">
+                        <h5>{{ sub.Name }}</h5>
+                        <p class="card-text">KHOÁ HỌC {{ sub.Id }} CƠ BẢN</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="see-more text-center mb-5 pb-5">
+        <button type="button" class="btn btn-outline-light fs-5 fw-bold p-3 see-more">
+            &nbsp;&nbsp;See-More!&nbsp;&nbsp;
+        </button>
+    </div>
+
+</div>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: #0A0819;
+    color: #fff;
+}
+
+/* định dạng backtop */
+#backtop {
+    width: 50px;
+    height: 50px;
+    background-color: #CC9B6D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#backtop:hover {
+    background-color: #9b7756;
+}
+
+#icon {
+    font-size: 20px;
+}
+
+/* bàn tay animation */
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+/* header */
+header {
+    position: relative;
+    background-position: center;
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header::before {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background-image: linear-gradient(to top, #0A0819, transparent);
+}
+
+header .title {
+    position: absolute;
+    font-size: xxx-large;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Lobster', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header Strong {
+    color: #CC9B6D;
+}
+
+.navbar .logo img {
+    width: 55px;
+}
+
+.navbar {
+    width: 100%;
+    z-index: 5;
+    height: 70px;
+    /* background-color: #d6d5d58b; */
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas ul li a {
+    color: #757d85;
+}
+
+.offcanvas ul li a:hover {
+    color: #3d3d3d;
+}
+
+.image {
+    position: absolute;
+    left: 96%;
+    top: 38.2%;
+}
+
+.image a {
+    color: white;
+    text-decoration: none;
+}
+
+.image i {
+    display: flex;
+    font-size: 30px;
+    padding: 20px 20px 20px 0px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .image {
+        position: absolute;
+        left: 34%;
+        top: 52%;
+    }
+
+    .image i {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .info-Company h4,
+    .info-Company p {
+        font-size: small;
+    }
+
+    .col-lg-6 h4,
+    .col-lg-6 p {
+        font-size: small;
+    }
+
+    .baner {
+        display: none;
+    }
+
+    .col-lg-9 {
+        margin-top: 20px;
+    }
+}
+
+/* container */
+
+.bigTitle {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin: 50px 0;
+    padding: 16px;
+}
+
+.bigTitle .des {
+    font-size: large;
+    font-weight: normal;
+}
+
+.zoom {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+.checkin {
+    width: 100%;
+}
+
+.checkin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.checkin .item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.checkin .item .title {
+    text-shadow: 0 0 20px black;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.checkin .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+/* khoá học */
+h5 {
+    font-family: Arial;
+    text-align: center;
+}
+
+.card-logo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.card-text {
+    text-align: center;
+    font-size: small;
+}
+
+.card-logo {
+    position: relative;
+    border: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.4s ease;
+}
+
+.card-logo:hover .overlay {
+    height: 100%;
+}
+
+.overlay {
+    padding: 0px 20px 0px 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay button a {
+    color: white;
+}
+
+.overlay button {
+    padding: 10px;
+}
+
+.overlay p {
+    color: white;
+    font-size: 16px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: black;
+}
+
+.container .item ul li a {
+    padding: 10px 10px 10px 0px;
+    display: flex;
+    text-decoration: none;
+}
+
+.container .item ul li {
+    font-size: small;
+    list-style: none;
+}
+
+.item a:nth-child(1) {
+    font-family: 'Lobster', cursive;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+}
+
+.item a {
+    color: #fff;
+}
+
+.contact h3,
+.col-6 button {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+}
+
+.design {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #423F3E;
+    font-size: small;
+}
+
+/* dùng chung */
+.red {
+    color: red;
+    font-weight: normal;
+}
+
+.bg-color {
+    border: 1px solid #CC9B6D;
+    background-color: #CC9B6D;
+    color: white;
+}
+
+.bg-color:hover {
+    background-color: #9b7756;
+}
+
+.color {
+    color: #CC9B6D;
+}
+
+.drop-item {
+    display: block;
+    padding: 0px 10px 10px 20px;
+}
+
+.btn-outline-bg-yellow {
+    border: 1px solid #CC9B6D;
+}
+
+.btn-outline-bg-yellow:hover {
+    background-color: #9b7756;
+}
+
+/* toast */
+.notifications {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+}

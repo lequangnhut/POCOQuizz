@@ -1,0 +1,105 @@
+<div class="layout">
+
+    <!-- form đăng KÝ -->
+    <div class="container mt-5 pt-5 mb-5 pb-5 p-4" style="min-height: 60vh;">
+
+        <div class="row bg-white rounded-4" style="box-shadow: 4px 4px 4px rgba(190, 190, 190, 0.5);">
+
+            <div class="col-lg-5">
+
+                <form autocomplete="off" ng-submit="sigin()" name="formChk">
+
+                    <div class="logo-profile pt-3"
+                        style="display: grid; justify-content: center; align-items: center; ">
+                        <img src="images/profile-logo.png" width="110px" class="img-fluid rounded-top">
+                    </div>
+
+                    <h3 class="text-dark text-center fw-bold">Đăng Ký Thành Viên !
+                        <span class="wave">👋</span>
+                    </h3>
+
+                    <div class="m-4">
+                        <input type="email" style="height: 44px;" class="form-control rounded-5" name="txtEmail"
+                            ng-model="email" placeholder="Email" required>
+                        <small class="text-danger" ng-show="formChk.txtEmail.$touched && formChk.txtEmail.$invalid">
+                            Vui lòng nhập đúng định dạng email !
+                        </small>
+                    </div>
+
+                    <div class="m-4">
+                        <input type="text" style="height: 44px;" class="form-control rounded-5" name="txtFullname"
+                            ng-model="fullname" placeholder="Họ và tên"
+                            pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$"
+                            required>
+                        <small class="text-danger"
+                            ng-show="formChk.txtFullname.$touched && formChk.txtFullname.$invalid">
+                            Vui lòng nhập đúng định dạng họ tên !
+                        </small>
+                    </div>
+
+                    <div class="m-4">
+                        <input type="password" style="height: 44px;" class="form-control rounded-5" name="txtPassword"
+                            ng-model="password" placeholder="Mật khẩu" minlength="6" required>
+                        <small class="text-danger"
+                            ng-show="formChk.txtPassword.$touched && formChk.txtPassword.$invalid">
+                            Vui lòng nhập mật khẩu !
+                        </small>
+                    </div>
+
+                    <div class="m-4">
+                        <input type="text" style="height: 44px;" class="form-control rounded-5" name="txtPhone"
+                            ng-model="phone" placeholder="Số điện thoại" pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b"
+                            required>
+                        <small class="text-danger" ng-show="formChk.txtPhone.$touched && formChk.txtPhone.$invalid">
+                            Vui lòng nhập đúng định dạng số điện thoại !
+                        </small>
+                    </div>
+
+                    <div class="m-4">
+                        <input type="date" style="height: 44px;" class="form-control rounded-5" name="txtDate"
+                            ng-model="birthday" placeholder="Ngày sinh" required>
+                        <small class="text-danger" ng-show="formChk.txtDate.$touched && formChk.txtDate.$invalid">
+                            Vui lòng nhập đúng định dạng ngày !
+                        </small>
+                    </div>
+
+                    <div class="form-check-inline ps-4">
+                        <label class="text-dark">Giới tính: &nbsp;</label>
+                        <input class="form-check-input" type="radio" name="gender" ng-model="gender" value="true"
+                            id="nam" checked>
+                        <label class="form-check-label text-dark" for="nam">
+                            Nam
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" ng-model="gender" value="false"
+                            id="nu">
+                        <label class="form-check-label text-dark" for="nu">
+                            Nữ
+                        </label>
+                    </div>
+
+                    <div class="m-4 text-center">
+                        <button class="bg-color fw-bold text-light rounded-5 w-100" style="height: 44px;"
+                            type="submit">Đăng ký</button>
+
+                        <label class="text-dark mt-3">Bạn đã có tài khoản hãy
+                            <a href="#!login" class="color"> Đăng nhập</a> ngay.
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-lg-7">
+                <div class="baner pt-5 mt-4">
+                    <img src="images/bg-sigin.png" class="img-fluid rounded-top">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
