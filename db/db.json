@@ -66,6 +66,14 @@
       "phone": "0869996530",
       "gender": "true",
       "date": "2023-06-29T17:00:00.000Z"
+    },
+    {
+      "id": 0.7699733983312174,
+      "email": "nhutlqpc04797@fpt.edu.vn",
+      "fullname": "Lê Quang Nhựt",
+      "password": "123123",
+      "phone": "0805015900",
+      "date": "2023-06-28T17:00:00.000Z"
     }
   ],
   "subjectFloat": [
